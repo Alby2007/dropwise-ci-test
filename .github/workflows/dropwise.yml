@@ -16,4 +16,4 @@ jobs:
           fetch-depth: 0
       - uses: Alby2007/DropWise@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
