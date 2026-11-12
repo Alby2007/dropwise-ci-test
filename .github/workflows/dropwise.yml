@@ -1,0 +1,19 @@
+name: dropwise
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review-migrations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: Alby2007/DropWise@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
